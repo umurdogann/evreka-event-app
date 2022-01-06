@@ -1,10 +1,11 @@
+import EventPage from './Pages/EventPage';
 
 function App() {
-  return (
-    <div>
-      Evreka event app
-    </div>
-  );
+	return (
+		<div className='container'>
+			<EventPage />
+		</div>
+	);
 }
 
 export default App;
