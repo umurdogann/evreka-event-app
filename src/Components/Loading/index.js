@@ -5,7 +5,7 @@ import { LoadingContainer, LoadingIcon } from './styled';
 const Loading = ({ isSuccess, callback }) => {
 	useEffect(() => {
 		setTimeout(() => {
-			callback(isSuccess ? 3 : 4);
+			callback && callback(isSuccess ? 3 : 4);
 		}, 1000);
 	}, [callback, isSuccess]);
 	return (
