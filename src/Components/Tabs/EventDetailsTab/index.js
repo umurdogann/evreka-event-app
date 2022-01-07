@@ -3,9 +3,13 @@ import { Container, ContentContainer, Hr, TabsContainer, TabTitle } from '../sty
 import Details from './Details';
 import Location from './Location';
 import Media from './Media';
-const EventDetailsTab = () => {
+const EventDetailsTab = ({ data }) => {
 	const tabs = ['DETAILS', 'LOCATION', 'MEDIA'];
-	const contents = [<Details />, <Location />, <Media />];
+	const contents = [
+		<Details data={data.details} />,
+		<Location data={data.location} />,
+		<Media data={data.media[0]} />,
+	];
 	const [selected, setSelected] = useState(0);
 
 	return (
