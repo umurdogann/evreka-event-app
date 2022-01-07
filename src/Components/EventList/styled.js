@@ -38,11 +38,8 @@ export const EventContainer = styled.div`
 	justify-content: space-between;
 	background-color: #fff;
 	box-shadow: 0px 3px 6px #00000014;
-	border-left: 9px solid transparent;
+	border-left: 9px solid ${(props) => (props.action==='-' ? '#e9cf30' : 'transparent')};
 	cursor: pointer;
-	&.no-action {
-		border-left: 9px solid #e9cf30;
-	}
 	&.selected {
 		background-color: #fbf5d6;
 	}
@@ -60,6 +57,7 @@ export const EventProperty = styled.div`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
+	gap: 0.2rem;
 `;
 
 export const Span = styled.span`

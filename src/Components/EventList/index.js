@@ -1,15 +1,23 @@
 import React from 'react';
 import { Container, EventContainer, EventProperty, Span } from './styled';
+import moment from 'moment';
 
-const Event = ({ state }) => {
-	const propertyTitles = ['Tarih', 'Tip', 'Rota İsmi', 'Kategori', 'Aksiyon'];
+const Event = ({ selected, data, clickCallback }) => {
+	
 	return (
-		<EventContainer className={state}>
-			{propertyTitles.map((property, index) => {
+		<EventContainer
+			className={selected && 'selected'}
+			action={data.details[4].value}
+			onClick={clickCallback}
+		>
+			{data.details.slice(0, 5).map((property, index) => {
+				let title = property.title;
+				let value = property.value;
+				if (!index) value = moment(value).format('DD.mm.yyyy HH:mm');
 				return (
 					<EventProperty key={index}>
-						<Span className='title'>{property}</Span>
-						<Span>lorem ipsun</Span>
+						<Span className='title'>{title}</Span>
+						<Span>{value}</Span>
 					</EventProperty>
 				);
 			})}
@@ -17,23 +25,19 @@ const Event = ({ state }) => {
 	);
 };
 
-const EventList = () => {
+const EventList = ({ data, selected, setSelected }) => {
 	return (
 		<Container>
-			<Event state='no-action' />
-			<Event state='selected' />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
-			<Event />
+			{data.map((item, index) => {
+				return (
+					<Event
+						key={index}
+						data={item}
+						selected={selected === index}
+						clickCallback={() => setSelected(index)}
+					/>
+				);
+			})}
 		</Container>
 	);
 };
