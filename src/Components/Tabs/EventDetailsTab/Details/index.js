@@ -1,29 +1,18 @@
 import React from 'react';
 import { Container, PropertyWrapper, Span } from './styled';
 
-const Details = () => {
+const Details = ({ data }) => {
 	return (
 		<Container>
-			<PropertyWrapper>
-				<Span className='title'>Araç</Span>
-				<Span>lorem ipsun</Span>
-			</PropertyWrapper>
-			<PropertyWrapper>
-				<Span className='title'>Araç</Span>
-				<Span>lorem ipsun</Span>
-			</PropertyWrapper>
-			<PropertyWrapper>
-				<Span className='title'>Araç</Span>
-				<Span>lorem ipsun</Span>
-			</PropertyWrapper>
-			<PropertyWrapper>
-				<Span className='title'>Araç</Span>
-				<Span>lorem ipsun</Span>
-			</PropertyWrapper>
-			<PropertyWrapper>
-				<Span className='title'>Araç</Span>
-				<Span>lorem ipsun</Span>
-			</PropertyWrapper>
+			{data.slice(5, data.length).map((property, index) => {
+				if (property.value === '-') return undefined;
+				return (
+					<PropertyWrapper key={index}>
+						<Span className='title'>{property.title}</Span>
+						<Span>{property.value}</Span>
+					</PropertyWrapper>
+				);
+			})}
 		</Container>
 	);
 };
