@@ -29,8 +29,7 @@ export const Wrapper = styled.div`
 		padding-top: 0;
 		flex-direction: column-reverse;
 		align-items: center;
-		justify-content: space-between;
-		border: 1px solid red;
+		justify-content: space-between;		
 		padding: 0.5rem;
 		gap: 0.5rem;
 	}
