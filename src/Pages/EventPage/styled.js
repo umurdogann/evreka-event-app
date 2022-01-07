@@ -49,8 +49,8 @@ export const SideContainer = styled.div`
 	}
 	@media (max-width: 992px) {
 		&.list-container {
-			min-height:24vh;
-			max-height:33vh;
+			min-height:33vh;
+			max-height:40vh;
 		}
 		&.details-container {
 			max-height: 63vh;
