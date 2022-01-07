@@ -8,20 +8,23 @@ export const Container = styled.div`
 
 export const PictureContainer = styled.div`
 	width: 100%;
-	height: 260px;
+	height: 16.25rem;
 	background-image: url(${(props) => props.src});
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
 	position: relative;
+	@media (max-width: 992px) {
+		max-height: 60vh;
+	}
 `;
 
 export const Icon = styled.img`
 	filter: brightness(0.8);
 	border: none;
 	outline: none;
-	width: 24px;
-	height: 24px;
+	width: 1.5rem;
+	height: 1.5rem;
 	position: absolute;
 	right: 1.5rem;
 	bottom: 1.5rem;
@@ -33,11 +36,14 @@ export const Icon = styled.img`
 `;
 
 export const ModalPictureContainer = styled.div`
-	width: 657px;
-	height: 438px;
+	width: 41.0625rem;
+	height: 27.375rem;
 	background-color: #fff;
 	padding: 1rem;
 	position: relative;
+	@media (max-width: 992px) {
+		width:100%;
+	}
 `;
 
 export const ModalPicture = styled.img`

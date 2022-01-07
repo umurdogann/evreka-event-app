@@ -31,14 +31,14 @@ export const Container = styled.div`
 
 export const EventContainer = styled.div`
 	width: 100%;
-	height: 70px;
+	height: 4.375rem;
 	display: flex;
 	flex-direction: row;
 	padding: 1.5rem 0.6rem;
 	justify-content: space-between;
 	background-color: #fff;
 	box-shadow: 0px 3px 6px #00000014;
-	border-left: 9px solid ${(props) => (props.action==='-' ? '#e9cf30' : 'transparent')};
+	border-left: 9px solid ${(props) => (props.action === '-' ? '#e9cf30' : 'transparent')};
 	cursor: pointer;
 	&.selected {
 		background-color: #fbf5d6;
@@ -49,6 +49,11 @@ export const EventContainer = styled.div`
 			`
     background-color: #F1F1E8;    
     `}
+	}
+	@media (max-width: 992px) {
+		min-height: 5rem;
+		gap: 1rem;
+		padding: 0.5rem 0.5rem;
 	}
 `;
 
@@ -61,9 +66,15 @@ export const EventProperty = styled.div`
 `;
 
 export const Span = styled.span`
-	font-size: 13px;
+	font-size: 0.8125rem;
 	color: #172c49;
 	&.title {
 		font-weight: bold;
+	}
+
+	@media (max-width: 992px) {
+		font-size: 0.7rem;
+		text-overflow:hidden;
+		word-break:break-all;
 	}
 `;

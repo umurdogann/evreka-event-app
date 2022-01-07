@@ -27,6 +27,10 @@ export const AlertHeader = styled.span`
 	&.fail {
 		color: #d92323;
 	}
+	@media (max-width: 992px) {
+		font-size:1.5rem;
+		text-align:center;
+	}
 `;
 
 export const AlertText = styled.span`

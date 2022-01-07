@@ -14,6 +14,9 @@ export const PropertyWrapper = styled.div`
 	justify-content: center;
 	gap: 0.2rem;
 	margin-right: 2rem;
+	@media (max-width: 992px) {
+		margin-right: 1.5rem;
+	}
 `;
 
 export const Span = styled.div`
@@ -24,5 +27,8 @@ export const Span = styled.div`
 	color: #172c49;
 	&.title {
 		font-weight: bold;
+	}
+	@media (max-width: 992px) {
+		font-size: 0.75rem;
 	}
 `;

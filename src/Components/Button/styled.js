@@ -29,4 +29,7 @@ export const StyledButton = styled.button`
 	&.secondary:enabled {
 		background-color: #454f63;
 	}
+	@media (max-width: 992px) {
+		font-size:0.75rem;	
+	}
 `;

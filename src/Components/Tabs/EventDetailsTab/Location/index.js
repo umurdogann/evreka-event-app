@@ -40,7 +40,7 @@ const Location = ({ data }) => {
 						<Span>{address}</Span>
 					</AddressContainer>
 					<MapContainer
-						style={{ width: '100%', height: '457px', zIndex: '2' }}
+						style={{ width: '100%', height: '28.5625rem', zIndex: '2', maxHeight:'37vh' }}
 						center={[data.latitude, data.longitude]}
 						zoom={16}
 						scrollWheelZoom={false}

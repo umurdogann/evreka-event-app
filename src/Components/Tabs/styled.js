@@ -6,6 +6,11 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 1.5rem;
+	@media (max-width: 992px) {
+		gap:1rem;
+		max-height:60vh;
+	}
+	
 `;
 
 export const TabsContainer = styled.div`
@@ -17,6 +22,10 @@ export const TabsContainer = styled.div`
 	gap: 2.5rem;
 	&.action {
 		justify-content: center;
+	}
+	@media (max-width: 992px) {
+		justify-content:space-around;
+		gap:0;
 	}
 `;
 
@@ -47,30 +56,49 @@ export const TabTitle = styled.span`
 		props.forAction &&
 		`
     letter-spacing: 0.1rem;
-    font-size: 19px;
+    font-size: 1.1875rem;
     `}
 	&.selected {
 		border-bottom: 4px solid #3da836;
 		color: #172c49;
 		z-index: 2;
 	}
+	@media (max-width: 992px) {
+		font-size: 0.875rem;
+		text-align:center;
+		gap:0.3rem;
+		${(props) =>
+		props.forAction &&
+		`
+    letter-spacing: 0rem;
+    font-size: 0.8rem;
+    `}
+	}
 `;
 
 export const ContentContainer = styled.div`
 	width: 100%;
+	@media (max-width: 992px) {
+		height:45vh;
+	}
 `;
 
 export const Number = styled.div`
-	height: 19px;
-	width: 19px;
+	height: 1.1875rem;
+	width: 1.1875rem;
 	background-color: #172c49;
 	border-radius: 50%;
 	color: #fff;
-	font-size: 12px;
+	font-size: 0.75rem;
 	font-weight: bold;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-left: 0.1rem;
 	box-sizing: border-box;
+	@media (max-width: 992px) {
+		padding-left:0;
+		height:1rem;
+		width:1rem;
+	}
 `;

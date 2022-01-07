@@ -7,11 +7,14 @@ export const ModalContainer = styled.div`
 	border-radius: 12px;
 	padding: 3rem 2.5rem 2rem 2.5rem;
 	position: relative;
+	@media (max-width: 992px) {
+		width: 100%;
+	}
 `;
 
 export const SelectActionConainer = styled.div`
 	width: 100%;
-	min-height: 230px;
+	min-height: 14.375rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -28,6 +31,15 @@ export const Span = styled.div`
 	}
 	&.take-action-text {
 		font-size: 1rem;
+	}
+	@media (max-width: 992px) {
+		font-size: 0.75rem;
+		&.title {		
+		font-size: 0.85rem;
+	}
+	&.take-action-text {
+		font-size: 0.85rem;
+	}
 	}
 `;
 
@@ -56,6 +68,10 @@ export const Option = styled.div`
 		${Span} {
 			color: #fff;
 		}
+	}
+	@media (max-width: 992px) {
+		height:fit-content;
+		padding:0.5rem;
 	}
 `;
 

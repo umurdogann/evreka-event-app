@@ -6,6 +6,9 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	@media (max-width: 992px) {
+		max-height: 60vh;
+	}
 `;
 
 export const AddressContainer = styled.div`
@@ -19,4 +22,8 @@ export const Span = styled.span`
 	&.title {
 		font-weight: bold;
 	}
+	@media (max-width: 992px) {
+		font-size: 0.75rem;
+	}
+	
 `;

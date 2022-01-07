@@ -9,6 +9,10 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	@media (max-width: 992px) {
+		max-height:63vh;	
+		gap:1rem;		
+	}
 `;
 
 export const ButtonContainer = styled.div`

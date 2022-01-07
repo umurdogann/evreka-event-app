@@ -9,6 +9,7 @@ const Alert = ({ isSuccess }) => {
 	const messageText = isSuccess
 		? 'You can see the action details from details tab.'
 		: 'We cannot continue due to a problem. Please try again later.';
+
 	return (
 		<MessageContainer>
 			<Icon src={icon} />
