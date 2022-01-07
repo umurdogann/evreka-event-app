@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ButtonContainer, Container } from './styled';
 import Button from '../Button/index';
 import Tabs from '../Tabs';
 import Modal from '../Modal';
-import { useEffect } from 'react/cjs/react.development';
+
 
 const EventDetails = ({ index, data, setData }) => {
 	const [showModal, setShowModal] = useState(false);
