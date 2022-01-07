@@ -3,10 +3,9 @@ import Audio from './audio';
 import Image from './image';
 import { Container } from './styled';
 
-const components = { audio: <Audio />, image: <Image /> };
-
-const Media = () => {
-	return <Container>{components.image}</Container>;
+const Media = ({ data }) => {
+	const components = { audio: <Audio url={data.url} />, image: <Image url={data.url} /> };
+	return <Container>{components[data.type]}</Container>;
 };
 
 export default Media;

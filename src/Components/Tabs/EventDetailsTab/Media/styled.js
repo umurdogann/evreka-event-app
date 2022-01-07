@@ -17,6 +17,7 @@ export const PictureContainer = styled.div`
 `;
 
 export const Icon = styled.img`
+	filter: brightness(0.8);
 	border: none;
 	outline: none;
 	width: 24px;

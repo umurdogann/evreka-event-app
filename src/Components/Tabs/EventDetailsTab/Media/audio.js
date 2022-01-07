@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Audio = () => {
+const Audio = ({ url }) => {
 	return (
 		<audio controls style={{ width: '100%' }}>
-			<source src={'https://media.evreka.co/1580120425.mp3'} type='audio/mp3' />
+			<source src={url} type='audio/mp3' />
 		</audio>
 	);
 };
