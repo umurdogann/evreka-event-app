@@ -1,16 +1,14 @@
 # Evreka Event Application
 
-
-
 This is an application built with React, and you can access the live demo [HERE](https://evreka-event-app.netlify.app/)
 
+&nbsp;
 # Objective
 Complete the task given by Evreka.
 
+&nbsp;
 # Outline
 You can access the outline document [HERE](https://pdfhost.io/v/~C1XAN8nm_20200813_Evreka_Frontend_Questions_BAT)
-
-
 
 &nbsp;
 # Used Packages
@@ -20,7 +18,6 @@ You can access the outline document [HERE](https://pdfhost.io/v/~C1XAN8nm_202008
 | styled-components         	|
 | moment                    	|
 | @csstools/normalize.css       |
-| css-reset        	            |
 | leaflet          	            |
 
 &nbsp;
