@@ -44,7 +44,7 @@ export const TabTitle = styled.span`
 	border-bottom: 4px solid transparent;
 	transition: 150ms ease-in-out;
 	${(props) =>
-		props.action &&
+		props.forAction &&
 		`
     letter-spacing: 0.1rem;
     font-size: 19px;

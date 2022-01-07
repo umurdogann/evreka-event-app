@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { ButtonContainer, Counter, InfoContainer, InputContainer, Span, TakeActionContainer, TextArea } from './styled';
 import Button from '../../Button/index';
-const TakeAction = ({ callback, option }) => {
-	const [detail, setDetail] = useState('');
+const TakeAction = ({ callback, option, detail, setDetail }) => {
 	return (
 		<TakeActionContainer>
 			<InfoContainer>

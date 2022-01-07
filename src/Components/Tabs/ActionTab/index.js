@@ -18,20 +18,29 @@ const options = [
 	},
 ];
 
-const ActionTab = ({ closeCallback }) => {
+const ActionTab = ({ closeCallback, data, setData, index }) => {
 	const tabs = ['SELECT ACTION', 'TAKE ACTION'];
 	const [pageIndex, setPageIndex] = useState(0);
 	const [action, setAction] = useState(-1);
 	const [success, setSuccess] = useState(null);
+	const [detail, setDetail] = useState('');
+	
+	const updateData = () => {
+		let temp = [...data];
+		temp[index].details[4].value = options[action].title;
+		temp[index].details.push({ title: 'Details', value: detail });
+		setData(temp);
+	};
 
 	const callBack = (val, state) => {
 		state && setSuccess(state);
 		setPageIndex(val);
+		if (val === 3 && success) updateData();
 	};
 
 	const components = [
 		<SelectAction callback={callBack} action={action} setAction={setAction} options={options} />,
-		<TakeAction callback={callBack} option={options[action]} />,
+		<TakeAction callback={callBack} option={options[action]} detail={detail} setDetail={setDetail} />,
 		<Loading callback={callBack} isSuccess={true} />,
 		<AlertMessage isSuccess={success} />,
 	];
@@ -44,7 +53,7 @@ const ActionTab = ({ closeCallback }) => {
 						<TabsContainer className='action'>
 							{tabs.map((tab, index) => {
 								return (
-									<TabTitle key={index} className={pageIndex === index && 'selected'} action={true}>
+									<TabTitle key={index} className={pageIndex === index && 'selected'} forAction={true}>
 										<Number>{index + 1}</Number>
 										{tab}
 									</TabTitle>
