@@ -7,10 +7,9 @@ export const Container = styled.div`
 	flex-direction: column;
 	gap: 1.5rem;
 	@media (max-width: 992px) {
-		gap:1rem;
-		max-height:60vh;
+		gap: 1rem;
+		max-height: 60vh;
 	}
-	
 `;
 
 export const TabsContainer = styled.div`
@@ -24,8 +23,8 @@ export const TabsContainer = styled.div`
 		justify-content: center;
 	}
 	@media (max-width: 992px) {
-		justify-content:space-around;
-		gap:0;
+		justify-content: space-around;
+		gap: 0;
 	}
 `;
 
@@ -65,11 +64,11 @@ export const TabTitle = styled.span`
 	}
 	@media (max-width: 992px) {
 		font-size: 0.875rem;
-		text-align:center;
-		gap:0.3rem;
+		text-align: center;
+		gap: 0.3rem;
 		${(props) =>
-		props.forAction &&
-		`
+			props.forAction &&
+			`
     letter-spacing: 0rem;
     font-size: 0.8rem;
     `}
@@ -79,7 +78,7 @@ export const TabTitle = styled.span`
 export const ContentContainer = styled.div`
 	width: 100%;
 	@media (max-width: 992px) {
-		height:45vh;
+		height: 45vh;
 	}
 `;
 
@@ -97,8 +96,8 @@ export const Number = styled.div`
 	padding-left: 0.1rem;
 	box-sizing: border-box;
 	@media (max-width: 992px) {
-		padding-left:0;
-		height:1rem;
-		width:1rem;
+		padding-left: 0;
+		height: 1rem;
+		width: 1rem;
 	}
 `;

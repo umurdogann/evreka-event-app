@@ -25,5 +25,4 @@ export const Span = styled.span`
 	@media (max-width: 992px) {
 		font-size: 0.75rem;
 	}
-	
 `;

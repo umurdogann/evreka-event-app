@@ -28,8 +28,8 @@ export const AlertHeader = styled.span`
 		color: #d92323;
 	}
 	@media (max-width: 992px) {
-		font-size:1.5rem;
-		text-align:center;
+		font-size: 1.5rem;
+		text-align: center;
 	}
 `;
 

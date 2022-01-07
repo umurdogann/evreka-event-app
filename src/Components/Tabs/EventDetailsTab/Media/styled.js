@@ -42,7 +42,7 @@ export const ModalPictureContainer = styled.div`
 	padding: 1rem;
 	position: relative;
 	@media (max-width: 992px) {
-		width:100%;
+		width: 100%;
 	}
 `;
 

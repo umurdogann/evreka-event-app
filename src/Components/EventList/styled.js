@@ -74,7 +74,7 @@ export const Span = styled.span`
 
 	@media (max-width: 992px) {
 		font-size: 0.7rem;
-		text-overflow:hidden;
-		word-break:break-all;
+		text-overflow: hidden;
+		word-break: break-all;
 	}
 `;

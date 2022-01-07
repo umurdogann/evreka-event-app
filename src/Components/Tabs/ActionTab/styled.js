@@ -34,12 +34,12 @@ export const Span = styled.div`
 	}
 	@media (max-width: 992px) {
 		font-size: 0.75rem;
-		&.title {		
-		font-size: 0.85rem;
-	}
-	&.take-action-text {
-		font-size: 0.85rem;
-	}
+		&.title {
+			font-size: 0.85rem;
+		}
+		&.take-action-text {
+			font-size: 0.85rem;
+		}
 	}
 `;
 
@@ -70,8 +70,8 @@ export const Option = styled.div`
 		}
 	}
 	@media (max-width: 992px) {
-		height:fit-content;
-		padding:0.5rem;
+		height: fit-content;
+		padding: 0.5rem;
 	}
 `;
 

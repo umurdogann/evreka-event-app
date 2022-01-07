@@ -3,13 +3,8 @@ import { Container, EventContainer, EventProperty, Span } from './styled';
 import moment from 'moment';
 
 const Event = ({ selected, data, clickCallback }) => {
-	
 	return (
-		<EventContainer
-			className={selected && 'selected'}
-			action={data.details[4].value}
-			onClick={clickCallback}
-		>
+		<EventContainer className={selected && 'selected'} action={data.details[4].value} onClick={clickCallback}>
 			{data.details.slice(0, 5).map((property, index) => {
 				let title = property.title;
 				let value = property.value;

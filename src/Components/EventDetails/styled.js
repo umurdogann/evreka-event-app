@@ -10,8 +10,8 @@ export const Container = styled.div`
 	flex-direction: column;
 	gap: 2rem;
 	@media (max-width: 992px) {
-		max-height:63vh;	
-		gap:1rem;		
+		max-height: 63vh;
+		gap: 1rem;
 	}
 `;
 

@@ -8,11 +8,11 @@ export const Container = styled.div`
 	height: 100vh;
 	@media (max-width: 992px) {
 		padding: 0;
-		overflow:hidden;
+		overflow: hidden;
 	}
 	@media (max-height: 720px) {
 		padding: 0;
-		overflow:hidden;
+		overflow: hidden;
 	}
 `;
 
@@ -26,13 +26,13 @@ export const Wrapper = styled.div`
 	justify-content: flex-start;
 	padding-top: 2rem;
 	@media (max-width: 992px) {
-		padding-top:0;
-		flex-direction: column-reverse;		
-		align-items:center;
-		justify-content:space-between;				
-		border:1px solid red;
-		padding:0.5rem;
-		gap:0.5rem;
+		padding-top: 0;
+		flex-direction: column-reverse;
+		align-items: center;
+		justify-content: space-between;
+		border: 1px solid red;
+		padding: 0.5rem;
+		gap: 0.5rem;
 	}
 `;
 
@@ -49,12 +49,11 @@ export const SideContainer = styled.div`
 	}
 	@media (max-width: 992px) {
 		&.list-container {
-			min-height:33vh;
-			max-height:40vh;
+			min-height: 33vh;
+			max-height: 40vh;
 		}
 		&.details-container {
 			max-height: 63vh;
-			
 		}
 	}
 `;
@@ -67,6 +66,6 @@ export const Header = styled.span`
 		margin-left: 1.125rem;
 	}
 	@media (max-width: 992px) {
-		display:none;
+		display: none;
 	}
 `;

@@ -17,7 +17,7 @@ const EventPage = ({ responseData }) => {
 				{selectedEvent !== -1 && (
 					<SideContainer className='details-container'>
 						<Header>EVENT DETAILS</Header>
-						<EventDetails data={data} index={selectedEvent} setData={setData}/>
+						<EventDetails data={data} index={selectedEvent} setData={setData} />
 					</SideContainer>
 				)}
 			</Wrapper>

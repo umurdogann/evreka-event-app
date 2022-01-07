@@ -24,7 +24,7 @@ const ActionTab = ({ closeCallback, data, setData, index }) => {
 	const [action, setAction] = useState(-1);
 	const [success, setSuccess] = useState(null);
 	const [detail, setDetail] = useState('');
-	
+
 	const updateData = () => {
 		let temp = [...data];
 		temp[index].details[4].value = options[action].title;
@@ -53,7 +53,11 @@ const ActionTab = ({ closeCallback, data, setData, index }) => {
 						<TabsContainer className='action'>
 							{tabs.map((tab, index) => {
 								return (
-									<TabTitle key={index} className={pageIndex === index && 'selected'} forAction={true}>
+									<TabTitle
+										key={index}
+										className={pageIndex === index && 'selected'}
+										forAction={true}
+									>
 										<Number>{index + 1}</Number>
 										{tab}
 									</TabTitle>
